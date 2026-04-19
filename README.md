@@ -1,8 +1,3 @@
-Now we’re talking — this is the kind of system that actually gets attention in interviews 🔥
-I’ll give you a **complete MAANG-level neural network training pipeline (from scratch)** — modular, scalable, and production-style.
-
----
-
 # 🚀 Complete Neural Network Training Pipeline (From Scratch)
 
 ## 📌 Features
