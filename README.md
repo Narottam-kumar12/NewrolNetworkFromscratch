@@ -208,17 +208,82 @@ for epoch in range(epochs):
 
 ---
 
-# 🧠 Why This is MAANG-Level
+Got it — you want a **complete neural network pipeline in graph/diagram form** (exam + interview friendly). Here’s a clean, structured flow you can use directly 👇
 
-This is not just code — it reflects **real system design thinking**:
+---
 
-### ✅ Concepts Covered
+# 🧠 Neural Network Training Pipeline (Graph View)
 
-* Forward + Backward propagation
-* Computational graph intuition
-* Optimizer internals
-* Batch training
-* Numerical stability (softmax trick)
-* Modular design (extensible like PyTorch)
+```
+                ┌──────────────────────┐
+                │   Input Data (X, y)  │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Data Preprocessing │
+                │ (Normalization, One- │
+                │   Hot Encoding)      │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Mini-Batch Loader  │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │     Forward Pass     │
+                │  X → Dense → ReLU →  │
+                │  Dense → Softmax     │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │     Predictions      │
+                │       (ŷ)            │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │    Loss Function     │
+                │ (Cross-Entropy/MSE)  │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │    Backpropagation   │
+                │   (Compute Gradients)│
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │      Optimizer       │
+                │ (SGD / Adam / RMS)   │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Update Weights     │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │  Check Convergence   │
+                │ (Epoch / Accuracy)   │
+                └───────┬──────────────┘
+                        │
+              ┌─────────▼─────────┐
+              │   Stop Training?  │
+              └───────┬───────────┘
+                      │ No
+                      ▼
+                (Repeat Loop 🔁)
+                      │
+                      ▼ Yes
+                ┌──────────────────────┐
+                │   Final Model Output │
+                └──────────────────────┘
+```
 
 ---
